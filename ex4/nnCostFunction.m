@@ -79,7 +79,7 @@ a3 = sigmoid(z3);
 
 cost = (1/m)*sum(sum((-Ymatrix).*log(a3) - (1 - Ymatrix).*log(1-a3), 2));
 
-regCost = (lambda/(2*m))*(sum(sum(Theta1.^2)) + sum(sum(Theta2.^2)));
+regCost = (lambda/(2*m))*(sum(sum(Theta1(:,2:end).^2)) + sum(sum(Theta2(:,2:end).^2)));
 J = cost + regCost;
 
 
